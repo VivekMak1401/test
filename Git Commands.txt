@@ -1,0 +1,83 @@
+// set username and email 
+git config user.name VivekMak1401
+git config user.email vivekmakwana@gmail.com
+
+// view user and email
+git config user.name
+git config user.email
+
+
+initialized the folder/dir:
+git init
+
+go the the folder/dir you want to make a repository by following commands:
+example:
+// go to d drive
+cd d:
+// make a directory
+mkdir test
+// make a file
+touch index.html
+touch style.css
+
+// add files to the modified stage and than staging stage and than commit it
+
+git add .(last is period)
+
+// can also do this 
+git add index.html
+git add style.css
+
+// for the checking the file status in which stage it is
+git status
+
+// for commit a file
+git commit -m "index and style file commited"
+
+// track the commits
+git log
+git log --oneline (user for single line)
+
+// checkout commit  -- only for the previous code preview
+git checkout logID (here the logid will be used at the end for particular commit)
+git checkout master
+
+// revert commit  -- to remove a particular feature
+git revert logID (here the logid will be used at the end for particular commit)
+another editable text will appear for the revert 
+to exit:
+shift + :
+type wq
+
+// reset commit -- this will not make change anything in the present working directory
+git reset logID
+
+// this will make a change in the commits (permanent deletes changes)
+git reset logid --hard
+
+// for adding new feature in future and make a branch
+git branch feature-1 (at last we used branch name)
+
+// for list the branch available in the repo
+git branch -a
+
+// to go to particular branch 
+git checkout feature-1 (at last we used branch name)
+
+// In branch you can make changes in the project by not modifying the master brancch 
+// So the changes made to other branch will not be appear to the master branch
+
+// delete a branch (if not merged)
+git branch -D branch_name (at last use the branchname)
+
+// for making a new branch and go directly into it
+git checkout -b branch_name (at last use the branchname)
+
+// merging 2 branch into master branch
+git merge feature-a
+git merge feature-b
+
+
+
+
+
