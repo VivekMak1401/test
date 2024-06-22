@@ -1,3 +1,5 @@
+Git:
+
 // set username and email 
 git config user.name VivekMak1401
 git config user.email vivekmakwana@gmail.com
@@ -76,6 +78,143 @@ git checkout -b branch_name (at last use the branchname)
 // merging 2 branch into master branch
 git merge feature-a
 git merge feature-b
+
+GitHub:
+2 ways to create a repo:
+
+1) if the project/code is locally available we upload it to GitHub with following steps:
+
+// On GitHub
+// create a new repo, fill required fields on GitHub
+// copy the repo link and in the git cmd type
+git push link master (here paste the link and mention the in which branch you want to add)
+
+// by default GitHub has a main branch.
+// now if we change something in the code and than want to upload that code we can simply use the above command after commit the file
+git push link master
+
+// but if don't want to use the whole link than we can simply make an alias name for the link.
+git remote add alias_name link (here alias name can be anything)
+
+// than with the same command using alias we can push that code in the repo
+git push alias_name branch_name (alias - origin, branch - master)
+
+
+
+2) Clonnig of remote repo from GitHub:
+
+// if we don't have any local projects/code we simply create a repo in GitHub
+
+// On GitHub
+// create a new repo, fill required fields on GitHub
+// by deafault main will be deafault branch
+// copy the repo link and type in git cmd 
+// come to parent directory
+cd ..
+
+// this will clone the whole repo in the local machine with the directory
+git clone link
+
+// go to that directory
+cd portfolio
+
+// now make some changes in the portfolio like add files etc.
+touch index.html
+
+// add the file to staging area & commit the changes
+git add .
+git commit -m "added index file"
+
+// upload that on the GitHub
+// now here the repo has already has alias name so we don't require to specify any alias_name for the repo
+// below command give the alais name for the repo for push and fetch
+git remote -v 
+
+// now upload the the file on GitHub
+git push alias_name branch_name
+git push origin main
+
+// check the changes on the GitHub now
+
+
+// collabration on GitHub
+// using pull we can up-to-date our local repo from the remote repo
+git pull alias_name branch_name
+
+// this will fetches all the code form the remote repo and merges to our local main/master branch
+git pull origin main
+
+// now all the remote code has installed in the local repo
+// make a seprate branch & it will redirect to you to that branch itself
+git checkout -b index.html
+
+// now make some changes in the index file
+// add the file and commit it 
+git add .
+git commit -m "added index file"
+
+// now first merge the branch into the local master branch and than push that master branch into remote repo
+// beacuase other developers might not happy with the feature
+// now push that file 
+git push origin index.html
+
+// it will push that file to the remote repo into the index.html branch
+// now click on the compare& pull request
+// here we can comapre the currernt state of the master branch and and chages we have mde to the file 
+// we can make a pull request and merge the branch into the main/master branch
+// now open a pull request 
+// other developr can review it, can see commits that have been made and check the file code as well can add comment also
+// if all are good we can merge the pull request
+// after merging that it will merge into the main/master branch
+// than we can delete that branch beacuse the changes madde to the branch has been merged to the master branch
+// now u can see the master branch index.html file that has been changed.
+
+// go to the main branch now
+git checkout main
+
+// for adding any new feature you should always copy the remote repo into local repo
+git pull origin main
+
+// and make a seprate branch for that feature for not letting any issue to the main branch
+git checkout -b branch_name
+git checkout -b img-add
+
+// now made any required changes to the file and add it, commit it and uplod/push it to the GitHub
+// now create a pull request, review the changes made to the file
+// if all good merge the pull request to main branch and than delete the sub branch of that feature
+// now all changes have been made in the file has been merged to the master/main branch repo
+ 
+
+// forking  -- used to conrtibute in the open soruce projects
+// it will copy whole repo in out account so we can make achanges without harming the original code
+// on Github in any repo just click on the fork and it will make a copy of that repo in out account
+
+// now clone that repo in the local machine 
+git clone link
+
+// with alias_name
+git remote add origin link
+
+// go to that repo directory
+cd dir_name
+ 
+// check status
+git status
+
+// add files after changes in the file
+git add .
+
+// commit the files
+git commit -m "commited"
+
+// push the file to the remote repo in our account
+git push origin master/main
+
+// than create a pull request on the main account of that repo
+// they will review the code and than decide to merge that change in the repo if all good
+
+ 
+
 
 
 
