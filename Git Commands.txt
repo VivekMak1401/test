@@ -66,7 +66,7 @@ git branch -a
 // to go to particular branch 
 git checkout feature-1 (at last we used branch name)
 
-// In branch you can make changes in the project by not modifying the master brancch 
+// In branch you can make changes in the project by not modifying the master branch 
 // So the changes made to other branch will not be appear to the master branch
 
 // delete a branch (if not merged)
