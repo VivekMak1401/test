@@ -16,17 +16,21 @@ go the the folder/dir you want to make a repository by following commands:
 example:
 // go to d drive
 cd d:
+
 // make a directory
 mkdir test
+
 // make a file
 touch index.html
 touch style.css
 
 // add files to the modified stage and than staging stage and than commit it
+// 2 ways to add the file in the staging area
 
+1: All files
 git add .(last is period)
 
-// can also do this 
+2: Individual file
 git add index.html
 git add style.css
 
