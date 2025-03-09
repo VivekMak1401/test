@@ -149,7 +149,7 @@ git pull alias_name branch_name
 git pull origin main
 
 // now all the remote code has installed in the local repo
-// make a seprate branch & it will redirect to you to that branch itself
+// make a seprate branch & it will redirect to you to that branch 
 git checkout -b index.html
 
 // now make some changes in the index file
@@ -170,7 +170,7 @@ git push origin index.html
 // other developr can review it, can see commits that have been made and check the file code as well can add comment also
 // if all are good we can merge the pull request
 // after merging that it will merge into the main/master branch
-// than we can delete that branch beacuse the changes madde to the branch has been merged to the master branch
+// than we can delete that branch beacuse the changes madde to the branch has been merged to the main branch
 // now u can see the master branch index.html file that has been changed.
 
 // go to the main branch now
@@ -183,7 +183,7 @@ git pull origin main
 git checkout -b branch_name
 git checkout -b img-add
 
-// now made any required changes to the file and add it, commit it and uplod/push it to the GitHub
+// now made any required changes to the file and add it, commit it and push it to the GitHub
 // now create a pull request, review the changes made to the file
 // if all good merge the pull request to main branch and than delete the sub branch of that feature
 // now all changes have been made in the file has been merged to the master/main branch repo
@@ -215,12 +215,5 @@ git commit -m "commited"
 git push origin master/main
 
 // than create a pull request on the main account of that repo
-// they will review the code and than decide to merge that change in the repo if all good
-
- 
-
-
-
-
-
+// they will review the code and than decide to merge that change in the repo if all good.
 
